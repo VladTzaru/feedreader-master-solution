@@ -31,7 +31,7 @@ $(function() {
          * and that the URL is not empty.
          */
          it(`URL's are defined and not empty`, function () {
-           for (feed of allFeeds) {
+           for (let feed of allFeeds) {
              expect(feed.url).toBeDefined();
              expect(feed.url).not.toBeNull();
              expect(feed.url).not.toBe('');
@@ -43,7 +43,7 @@ $(function() {
          * and that the name is not empty.
          */
          it(`names are defined and not empty`, function () {
-           for(feed of allFeeds) {
+           for (let feed of allFeeds) {
              expect(feed.name).toBeDefined();
              expect(feed.name).not.toBeNull();
              expect(feed.name).not.toBe('');
@@ -120,7 +120,7 @@ $(function() {
             feedTitle_updated = $('.header-title').html();
             entry_updated = $('.entry').text();
             done();
-          })
+          });
           expect(feedTitle_initial).not.toBe(feedTitle_updated);
           expect(entry_initial).not.toBe(entry_updated);
           done();
