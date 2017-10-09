@@ -67,7 +67,6 @@ $(function() {
           $('.menu-icon-link').click();
           expect( $('body').hasClass('menu-hidden') ).toBeFalsy();
 
-          // Automatically closes the menu and checks the triggered expectation
           $('.menu-icon-link').click();
           expect( $('body').hasClass('menu-hidden') ).toBeTruthy();
           done();
@@ -85,7 +84,7 @@ $(function() {
         });
 
         it('has at least 1 entry in feed container', function(done) {
-          expect($('.feed').children().length).toBeGreaterThan(0);
+          expect($('.feed').find('.entry').length).toBeGreaterThan(0);
           done();
         });
     });
