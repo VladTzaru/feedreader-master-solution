@@ -32,9 +32,7 @@ $(function() {
          */
          it(`URL's are defined and not empty`, function () {
            for (let feed of allFeeds) {
-             expect(feed.url).toBeDefined();
-             expect(feed.url).not.toBeNull();
-             expect(feed.url).not.toBe('');
+             expect(feed.url).toBeTruthy();
            }
          });
 
@@ -44,9 +42,7 @@ $(function() {
          */
          it(`names are defined and not empty`, function () {
            for (let feed of allFeeds) {
-             expect(feed.name).toBeDefined();
-             expect(feed.name).not.toBeNull();
-             expect(feed.name).not.toBe('');
+             expect(feed.name).toBeTruthy();
            }
          });
     });
@@ -72,11 +68,9 @@ $(function() {
           expect( $('body').hasClass('menu-hidden') ).toBeFalsy();
 
           // Automatically closes the menu and checks the triggered expectation
-          setTimeout(function() {
-            $('.menu-icon-link').click();
-            expect( $('body').hasClass('menu-hidden') ).toBeTruthy();
-            done();
-          }, 1000);
+          $('.menu-icon-link').click();
+          expect( $('body').hasClass('menu-hidden') ).toBeTruthy();
+          done();
         });
     });
 
