@@ -4,6 +4,7 @@ Feed Reader is a web-based application that reads RSS feeds. The goal of the pro
 
 ## Getting Started
 To see how everything was set up, simply download the required project assets:
+https://github.com/VladTzaru/feedreader-master-solution
 
 ### Prerequisites
 - Jasmine 2.1.2 (included)
