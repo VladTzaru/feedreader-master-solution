@@ -37,7 +37,7 @@ There are 7 specs:
 
 Example:
 ```javascript
-describe('The menu', function () {
+ describe('The menu', function () {
         /* TODO: This test ensures the menu element is
         * hidden by default.
         */
@@ -56,12 +56,9 @@ describe('The menu', function () {
           $('.menu-icon-link').click();
           expect( $('body').hasClass('menu-hidden') ).toBeFalsy();
 
-          // Automatically closes the menu and checks the triggered expectation
-          setTimeout(function() {
-            $('.menu-icon-link').click();
-            expect( $('body').hasClass('menu-hidden') ).toBeTruthy();
-            done();
-          }, 1000);
+          $('.menu-icon-link').click();
+          expect( $('body').hasClass('menu-hidden') ).toBeTruthy();
+          done();
         });
     });
 ```
