@@ -13,7 +13,7 @@ https://github.com/VladTzaru/feedreader-master-solution
 - handlebars.js (included)
 
 ### Installing
-Upon downloading the required project assets, open the index.html file and review the functionality of the application within your browser.
+After you download the required project assets, open the index.html file and review the functionality of the application within your browser.
 
 ## Running the tests
 To run the tests:
